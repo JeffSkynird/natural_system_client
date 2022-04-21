@@ -110,8 +110,8 @@ export default function Crear(props) {
             'category_id': category,
             'description': descripcion,
             'stock': stock != "" ? stock : 0,
-            'min_stock': stockMin,
-            'max_stock': stockMax,
+            'min_stock': 0,
+            'max_stock': 0,
             'unity_id': unity,
             'url': image,
             'has_iva':hasIva?1:0,
@@ -126,7 +126,7 @@ export default function Crear(props) {
             } else {
                 editarSistema(props.sistema.id, data, initializer,limpiar)
                 
-                subir()
+              //  subir()
 
                 if (image == null) {
                     props.carga()

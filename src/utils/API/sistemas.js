@@ -36,15 +36,17 @@ for ( var key in data ) {
 
 export const editarSistema = (id,data, store,limpiar) => {
     const { usuario, mostrarNotificacion, mostrarLoader } = store;
-   
+    var resp = new FormData()
+    for ( var key in data ) {
+      resp.append(key, data[key]);
+    }
  
     let url = ENTRYPOINT+"products/"+id;
     let setting = {
-      method: "PUT",
+      method: "POST",
       url: url,
-      params:data,
-      data: data,
-      body: data,
+      data: resp,
+      body: resp,
       headers: { Accept: "application/json",  Authorization: "Bearer " + JSON.parse(desencriptarJson(usuario)).token, },
     };
     mostrarLoader(true);

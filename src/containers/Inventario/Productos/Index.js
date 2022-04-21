@@ -57,7 +57,7 @@ export default function Sistemas(props) {
 
             <Confirmar ancho={true} body={<img
                 style={{ height: '100%', width: '100%' }}
-                src={PUBLIC_PATH+"storage/" + imageSelected}
+                src={imageSelected}
             />} open={confirmarMensaje} setOpen={setConfirmarMensaje} accion={() => {
                 setImageSelected(null)
                 setConfirmarMensaje(false)
@@ -110,7 +110,7 @@ export default function Sistemas(props) {
                                         setImageSelected(rowData.image)
                                     }}
                                     style={{ height: 36, width: 36, borderRadius: 36 ,cursor: 'pointer' }}
-                                    src={PUBLIC_PATH+"storage/" + rowData.image}
+                                    src={rowData.image}
                                 />
                             ),
                         },
