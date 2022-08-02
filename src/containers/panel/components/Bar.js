@@ -38,7 +38,7 @@ export default function BarChart(props) {
         dataLabels: {
           enabled: true,
           formatter: function (val) {
-            return val ;
+            return val.toFixed(2) ;
           },
           offsetY: -20,
           style: {
