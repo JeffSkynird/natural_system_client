@@ -1,6 +1,6 @@
-export const ENTRYPOINT="https://shrouded-brook-95413.herokuapp.com/api/v1/"
+export const ENTRYPOINT=process.env.REACT_APP_SERVER_URL+"/api/v1/"
 export const LARAVEL_SGI="http://localhost:8001/api/v1/"
-export const PUBLIC_PATH="https://shrouded-brook-95413.herokuapp.com/"
+export const PUBLIC_PATH=process.env.REACT_APP_SERVER_URL+"/"
 
 
 /*
